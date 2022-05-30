@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343589929977",
+    "project_id": "imbizoapp-71a29",
+    "storage_bucket": "imbizoapp-71a29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343589929977:android:0b4f6b5206bb075af7f328",
+        "android_client_info": {
+          "package_name": "com.example.imbizo_foundation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343589929977-5fof4mpkshdrumqsoij4lq6nqj039080.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA_7XfU4M2ngGzocrZALP5qJuyA7QFk18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343589929977-5fof4mpkshdrumqsoij4lq6nqj039080.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
