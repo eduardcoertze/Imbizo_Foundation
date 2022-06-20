@@ -9,4 +9,38 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="Course_name">Programming</string>
+    <string name="Course_time">4h27min</string>
+    <string name="Course_rating">4.5</string>
+
+    <string-array name="Courses_txt">
+        <item>Programming</item>
+        <item>Stocks</item>
+        <item>Photography</item>
+        <item>Teaching</item>
+        <item>Fitness</item>
+        <item>Music</item>
+        <item>Art</item>
+    </string-array>
+
+    <string-array name="Courses_Time">
+        <item>4h27min</item>
+        <item>4h52min</item>
+        <item>3h12min</item>
+        <item>5h1min</item>
+        <item>4h11min</item>
+        <item>3h53min</item>
+        <item>5h3min</item>
+    </string-array>
+
+    <string-array name="Courses_Rating">
+        <item>4.5</item>
+        <item>5</item>
+        <item>3.9</item>
+        <item>4.6</item>
+        <item>4.2</item>
+        <item>5</item>
+        <item>3.7</item>
+    </string-array>
 </resources>

@@ -192,7 +192,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-//    //method for activity completion
+//  //method for activity completion
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        // loadDialogBar.ShowDialog();
@@ -279,12 +279,9 @@ public class LoginActivity extends AppCompatActivity {
             //Toast.makeText(IntroWelcome.this, personName + "  " + personEmail, Toast.LENGTH_LONG).show();
 
             //Go to main activity
-            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+            Intent i = new Intent(LoginActivity.this, HomePage.class);
             startActivity(i);
             finish();
         }
-
     }
-
-
 }
