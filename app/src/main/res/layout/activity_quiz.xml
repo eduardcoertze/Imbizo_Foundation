@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/iv_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="161dp"
+            android:layout_height="131dp"
             android:src="@drawable/imbizo_logo" />
 
         <TextView
@@ -80,7 +80,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="Very Inaccurate"
             android:background="@drawable/default_option_border_bg"
@@ -92,7 +92,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="Inaccurate"
             android:background="@drawable/default_option_border_bg"
@@ -104,7 +104,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="Neutral"
             android:background="@drawable/default_option_border_bg"
@@ -116,7 +116,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="Accurate"
             android:background="@drawable/default_option_border_bg"
@@ -129,7 +129,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="Very Accurate"
             android:background="@drawable/default_option_border_bg"
