@@ -1,74 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context=".QuizResult">
 
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="384dp"
-        android:layout_height="63dp"
-        android:ems="10"
-        android:hint="Description"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btn_quiz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:layout_constraintVertical_bias="0.343" />
-
     <ImageView
-        android:id="@+id/iv_image"
+        android:id="@+id/iv_imbizo_logo"
         android:layout_width="140dp"
         android:layout_height="106dp"
-        android:src="@drawable/imbizo_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        android:src="@drawable/imbizo_logo" />
 
     <TextView
-        android:id="@+id/tv_Description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="left"
-        android:text="Personality Description:"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_image"
-        app:layout_constraintVertical_bias="0.28" />
-
-    <TextView
-        android:id="@+id/tv_subtitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="left"
-        android:text="Personality Type:"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_image"
-        app:layout_constraintVertical_bias="0.086" />
-
-    <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/tv_result_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -76,37 +24,61 @@
         android:text="Personality Test Results"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_image"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/iv_trophy"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="image"
+        android:src="@drawable/ic_trophy" />
+
+
+
+    <TextView
+        android:id="@+id/tv_personality_type_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Personality Type:"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tv_personality_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_description_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Personality Description:"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
 
     <Button
-        android:id="@+id/btn_quiz"
+        android:id="@+id/btn_home_page"
         android:layout_width="279dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/white"
-        android:text="NEXT"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Back Home"
+        android:textColor="#000000"/>
 
-    <EditText
-        android:id="@+id/etType"
-        android:layout_width="384dp"
-        android:layout_height="63dp"
-        android:ems="10"
-        android:hint=" Introvert"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btn_quiz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:layout_constraintVertical_bias="0.095" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

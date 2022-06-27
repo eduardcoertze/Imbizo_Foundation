@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -22,7 +23,10 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     int currentPosition = 1;
     int selectedOptionPosition = 0;
+    int resultSum = 0;
     ArrayList<Question> mQuestionsList = new ArrayList<Question>();
+    ArrayList<Integer> resultArrayList = new ArrayList<Integer>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +64,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         defaultOptionView();
 
         if (currentPosition == mQuestionsList.size()) {
-            btnSubmit.setText("FINISH");
+            btnSubmit.setText("SUBMIT");
         } else {
             btnSubmit.setText("SUBMIT");
         }
@@ -101,8 +105,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_submit:
 
-                //
-
+                resultArrayList.add(selectedOptionPosition);
 
                 if (selectedOptionPosition == 0) {
 
@@ -114,23 +117,23 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                         }
                         else {
 
-                        // TODO: 2022/06/22 show result
+                            for (int i =0; i < resultArrayList.size(); i++){
+                                resultSum += resultArrayList.get(i);
+                            }
 
-//                            val intent = Intent(this, ResultActivity::class.java)
-//
-//                            intent.putExtra(Constants.USER_NAME, mUserName)
-//                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
-//                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList?.size)
-//                            startActivity(intent)
-//                            finish()
+                            Constants.resultTotal = resultSum;
 
+                        Intent resultActivity = new Intent(QuizActivity.this, QuizResult.class);
+                        //resultActivity.putExtra(String.valueOf(Constants.resultTotal),resultSum);
+                        startActivity(resultActivity);
+                        finish();
                         }
 
                 }else {
                     Question question = mQuestionsList.get(currentPosition - 1);
 
                     if (currentPosition == mQuestionsList.size()) {
-                        btnSubmit.setText("Finish");
+                        btnSubmit.setText("VIEW RESULTS");
                     } else {
                         btnSubmit.setText("GO TO NEXT QUESTION");
                     }
