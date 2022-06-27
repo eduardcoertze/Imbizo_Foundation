@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:background ="@drawable/gradient_background">
+
+<!--    <item   android:id="@+id/nav_account"-->
+<!--        android:icon="@drawable/ic_baseline_person_24"-->
+<!--        android:title="My Account" />-->
+<!--    <item   android:id="@+id/nav_help"-->
+<!--        android:icon="@drawable/ic_baseline_help_24"-->
+<!--        android:title="Help" />-->
+<!--    <item android:id="@+id/nav_exit"-->
+<!--        android:icon="@drawable/ic_baseline_exit_to_app_24"-->
+<!--        android:title="Sign Out" />-->
+
+    <item android:id="@+id/nav_test"
+        android:title="Personality Test"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        />
+</menu>
