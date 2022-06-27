@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".QuizResult">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
 
     <ImageView
         android:id="@+id/iv_imbizo_logo"
@@ -39,7 +44,7 @@
         android:id="@+id/tv_personality_type_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="15dp"
         android:text="Personality Type:"
         android:gravity="center"
         android:textColor="@color/black"
@@ -50,13 +55,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:layout_marginTop="5dp"
         android:gravity="center"/>
 
     <TextView
         android:id="@+id/tv_description_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Personality Description:"
         android:textColor="@color/black"
@@ -68,7 +74,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="5dp"
         android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_career_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Possible career options"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/lv_career"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"/>
 
 
     <Button
@@ -80,5 +104,5 @@
         android:textColor="#000000"/>
 
 
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

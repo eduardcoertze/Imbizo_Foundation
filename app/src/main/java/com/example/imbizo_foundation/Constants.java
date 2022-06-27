@@ -1,6 +1,7 @@
 package com.example.imbizo_foundation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Constants {
 
@@ -139,31 +140,60 @@ public class Constants {
 
         ArrayList<Result> resultsList = new ArrayList<Result>();
 
+        ArrayList<String> introvertList = new ArrayList<String>();
+        introvertList.add("- Accountancy");
+        introvertList.add("- Digital Marketing");
+        introvertList.add("- Graphic Design");
+        introvertList.add("- Video Editing");
+
+        ArrayList<String> omnivertList = new ArrayList<String>();
+        omnivertList.add("- Software Development");
+        omnivertList.add("- Actuarial Science");
+        omnivertList.add("- Architecture");
+        omnivertList.add("- Content Management");
+
+        ArrayList<String> ambivertList = new ArrayList<String>();
+        ambivertList.add("- Occupational Therapy");
+        ambivertList.add("- General Management");
+        ambivertList.add("- Financial Advisor");
+        ambivertList.add("- Criminal Investigation");
+
+        ArrayList<String> extrovertList = new ArrayList<String>();
+        extrovertList.add("- Law");
+        extrovertList.add("- Teaching");
+        extrovertList.add("- Event Planning");
+        extrovertList.add("- Sales Representative");
+
         Result result1 = new Result(
                 1,
                 "Introvert",
-                "a typically reserved or quiet person who tends to be introspective and enjoys spending time alone"
+                "A typically reserved or quiet person who tends to be introspective and enjoys spending time alone",
+                introvertList
+
         );
         resultsList.add(result1);
 
         Result result2 = new Result(
                 2,
                 "Omnivert",
-                "Someone who is an introvert and extrovert depending on situations"
+                "Someone who is an introvert and extrovert depending on situations",
+                omnivertList
         );
         resultsList.add(result2);
 
         Result result3 = new Result(
                 3,
                 "Ambivert",
-                "A person who has a balance of extrovert and introvert features in their personality."
+                "A person who has a balance of extrovert and introvert features in their personality.",
+                ambivertList
         );
         resultsList.add(result3);
 
         Result result4 = new Result(
                 4,
                 "Extrovert",
-                "A typically gregarious and unreserved person who enjoys and seeks out social interaction"
+                "A typically gregarious and unreserved person who enjoys and seeks out social interaction",
+                extrovertList
         );
         resultsList.add(result4);
 
