@@ -2,7 +2,7 @@ package com.example.imbizo_foundation;
 
 import android.icu.lang.UProperty;
 
-public class Question {
+public class  Question {
 
     //Question property declarations
     private int questionID;
