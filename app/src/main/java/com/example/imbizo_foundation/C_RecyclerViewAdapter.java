@@ -10,8 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAdapter.MyViewHolder> {
+
     Context context;
     ArrayList<CoursesModel> coursesModels;
 
@@ -33,8 +37,11 @@ public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAd
     public void onBindViewHolder(@NonNull C_RecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.tvName.setText(coursesModels.get(position).getCourseName());
         holder.tvTime.setText(coursesModels.get(position).getCourseTime());
-        holder.tvRating.setText(coursesModels.get(position).getCourseRating());
-        holder.imageView.setImageResource(coursesModels.get(position).getImage());
+
+        Glide.with(context).load(coursesModels.get(position).getImageURl()).into(holder.imageView);
+
+        //Picasso.get().load(coursesModels.get(position).getImageURl()).into(holder.imageView);
+       // holder.imageView.setImageResource(Picasso.get().load(coursesModels.get(position).getImageURl()));
 
     }
 
@@ -42,10 +49,11 @@ public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAd
     public int getItemCount() {
         return coursesModels.size();
     }
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         ImageView imageView;
-        TextView tvName, tvTime, tvRating;
+        TextView tvName, tvTime;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,7 +61,6 @@ public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAd
             imageView = itemView.findViewById(R.id.imageView);
             tvName = itemView.findViewById(R.id.tv_Name);
             tvTime = itemView.findViewById(R.id.tv_Time);
-            tvRating = itemView.findViewById(R.id.tv_Rating);
         }
     }
 }
