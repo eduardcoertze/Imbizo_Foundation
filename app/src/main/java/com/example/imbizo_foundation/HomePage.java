@@ -11,9 +11,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -24,13 +26,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class HomePage extends AppCompatActivity{
+public class HomePage extends AppCompatActivity implements RecyclerViewInterface{
 
     ArrayList<CoursesModel> courseList = new ArrayList<>();
 
     ImageView btnNav;
 
     DatabaseReference database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +49,8 @@ public class HomePage extends AppCompatActivity{
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
 
         RecyclerView recyclerView = findViewById(R.id.mRecyclerView);
-
-        //setUpCoursesModels();
-
-
-        C_RecyclerViewAdapter adapter = new C_RecyclerViewAdapter(this, courseList);
+        
+        C_RecyclerViewAdapter adapter = new C_RecyclerViewAdapter(this, courseList, this);
         recyclerView.setAdapter(adapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -112,32 +112,17 @@ public class HomePage extends AppCompatActivity{
         });
 
 
+
+
     }
 
-//    private void setUpCoursesModels() {
-//        String[] coursesNames = getResources().getStringArray(R.array.Courses_txt);
-//        String[] coursesTime = getResources().getStringArray(R.array.Courses_Time);
-//        String[] coursesRating = getResources().getStringArray(R.array.Courses_Rating);
-//
-//        for (int i = 0; i < coursesNames.length; i++) {
-//            courseList.add(new CoursesModel(coursesNames[i],
-//                    coursesTime[i],
-//                    coursesRating[i],
-//                    coursesImages[i]));
-//        }
-//    }
 
-//    private void setUpCoursesModels() {
-//        String[] coursesNames = getResources().getStringArray(R.array.Courses_txt);
-//        String[] coursesTime = getResources().getStringArray(R.array.Courses_Time);
-//        String[] coursesRating = getResources().getStringArray(R.array.Courses_Rating);
-//
-//        for (int i = 0; i < coursesNames.length; i++) {
-//            courseList.add(new CoursesModel(coursesNames[i],
-//                    coursesTime[i],
-//                    coursesImages[i]));
-//        }
-//    }
+    @Override
+    public void onItemClick(int position) {
+
+        Toast.makeText(this, courseList.get(position).courseName, Toast.LENGTH_SHORT).show();
+
+    }
 
 
 }
