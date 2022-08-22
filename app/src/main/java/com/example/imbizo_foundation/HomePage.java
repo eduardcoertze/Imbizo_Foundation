@@ -120,7 +120,17 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
     @Override
     public void onItemClick(int position) {
 
-        Toast.makeText(this, courseList.get(position).courseName, Toast.LENGTH_SHORT).show();
+        String Course = "";
+
+        Course = courseList.get(position).courseName;
+
+        Intent courseContentIntent = new Intent(HomePage.this, CourseContent.class);
+        courseContentIntent.putExtra("Course Name", Course);
+        courseContentIntent.putExtra("Course Position", position);
+        courseContentIntent.putExtra("List Size", courseList.size());
+        startActivity(courseContentIntent);
+//        finish();
+
 
     }
 
