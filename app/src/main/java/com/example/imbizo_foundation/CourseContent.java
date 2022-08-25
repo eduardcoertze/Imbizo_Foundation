@@ -12,6 +12,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.util.ArrayList;
 
@@ -26,13 +29,15 @@ public class CourseContent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_content);
 
+        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player);
+        getLifecycle().addObserver(youTubePlayerView);
+
         TextView courseName = findViewById(R.id.tv_courseContentName);
         TextView courseDescription = findViewById(R.id.tv_courseContentDescription);
         TextView firstParagraphTitle = findViewById(R.id.tv_courseContentFirstParagraphTitle);
         TextView firstParagraph = findViewById(R.id.tv_courseContentFirstParagraph);
         TextView secondParagraphTitle = findViewById(R.id.tv_courseContentSecondParagraphTitle);
         TextView secondParagraph = findViewById(R.id.tv_courseContentSecondParagraph);
-        TextView youtubeLink = findViewById(R.id.tv_courseContentYoutubeLink);
 
         courseDatabase = FirebaseDatabase.getInstance().getReference("Course Content");
 
@@ -65,7 +70,14 @@ public class CourseContent extends AppCompatActivity {
                         firstParagraph.setText(selectedCourse.firstParagraph);
                         secondParagraphTitle.setText(selectedCourse.getSecondParagraphTitle());
                         secondParagraph.setText(selectedCourse.secondParagraph);
-                        youtubeLink.setText(selectedCourse.youtubeLink);
+
+                        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                            @Override
+                            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                                String videoId = selectedCourse.youtubeLink;
+                                youTubePlayer.loadVideo(videoId, 0);
+                            }
+                        });
                     }
 
 
