@@ -16,6 +16,12 @@
         android:theme="@style/Theme.Imbizo_Foundation"
         tools:targetApi="31">
         <activity
+            android:name=".InspirationContent"
+            android:exported="false" />
+        <activity
+            android:name=".InspirationHomePage"
+            android:exported="false" />
+        <activity
             android:name=".CourseContent"
             android:exported="false" />
         <activity

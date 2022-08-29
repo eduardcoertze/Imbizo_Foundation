@@ -54,7 +54,6 @@ public class CourseContent extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
                     CourseContentModel coursesContentModel = dataSnapshot.getValue(CourseContentModel.class);
 
                     courseContentList.add(coursesContentModel);

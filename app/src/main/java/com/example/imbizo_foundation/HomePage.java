@@ -29,11 +29,8 @@ import java.util.ArrayList;
 public class HomePage extends AppCompatActivity implements RecyclerViewInterface{
 
     ArrayList<CoursesModel> courseList = new ArrayList<>();
-
     ImageView btnNav;
-
     DatabaseReference database;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,36 +42,24 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
         btnNav = findViewById(R.id.btnNav);
 
         NavigationView navView = findViewById(R.id.navigation_view);
-
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-
         RecyclerView recyclerView = findViewById(R.id.mRecyclerView);
-        
         C_RecyclerViewAdapter adapter = new C_RecyclerViewAdapter(this, courseList, this);
         recyclerView.setAdapter(adapter);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
                     CoursesModel coursesModel = dataSnapshot.getValue(CoursesModel.class);
-
-
                     courseList.add(coursesModel);
                 }
-
                 adapter.notifyDataSetChanged();
-
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
 
@@ -111,11 +96,7 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
             }
         });
 
-
-
-
     }
-
 
     @Override
     public void onItemClick(int position) {

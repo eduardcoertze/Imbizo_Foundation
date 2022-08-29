@@ -25,7 +25,6 @@ public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAd
         this.context = context;
         this.coursesModels = coursesModels;
         this.recyclerViewInterface = recyclerViewInterface;
-
     }
 
     @NonNull
@@ -48,9 +47,6 @@ public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAd
     public int getItemCount() {
         return coursesModels.size();
     }
-
-
-
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -76,16 +72,8 @@ public class C_RecyclerViewAdapter extends RecyclerView.Adapter<C_RecyclerViewAd
                     }
                 }
             });
-
-
-
         }
-
-
     }
-
-
-
 }
 
 
