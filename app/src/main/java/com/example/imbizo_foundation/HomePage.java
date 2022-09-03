@@ -80,11 +80,17 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
                 drawerLayout.closeDrawer(GravityCompat.START);
                 switch (id) {
 
-
                     case R.id.nav_test:
                         //Go to Tutorial activity
                         Intent quizIntent = new Intent(HomePage.this, QuizActivity.class);
                         startActivity(quizIntent);
+                        finish();
+                        break;
+
+                    case R.id.inspiration:
+                        //Go to Tutorial activity
+                        Intent inspirationIntent = new Intent(HomePage.this, InspirationHomePage.class);
+                        startActivity(inspirationIntent);
                         finish();
                         break;
                     default:

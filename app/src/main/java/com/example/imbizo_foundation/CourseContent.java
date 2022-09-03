@@ -38,6 +38,8 @@ public class CourseContent extends AppCompatActivity {
         TextView firstParagraph = findViewById(R.id.tv_courseContentFirstParagraph);
         TextView secondParagraphTitle = findViewById(R.id.tv_courseContentSecondParagraphTitle);
         TextView secondParagraph = findViewById(R.id.tv_courseContentSecondParagraph);
+        TextView thirdParagraphTitle = findViewById(R.id.tv_courseContentThirdParagraphTitle);
+        TextView thirdParagraph = findViewById(R.id.tv_courseContentThirdParagraph);
 
         courseDatabase = FirebaseDatabase.getInstance().getReference("Course Content");
 
@@ -69,12 +71,14 @@ public class CourseContent extends AppCompatActivity {
                         firstParagraph.setText(selectedCourse.firstParagraph);
                         secondParagraphTitle.setText(selectedCourse.getSecondParagraphTitle());
                         secondParagraph.setText(selectedCourse.secondParagraph);
+                        thirdParagraphTitle.setText(selectedCourse.thirdParagraphTitle);
+                        thirdParagraph.setText(selectedCourse.thirdParagraph);
 
                         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                             @Override
                             public void onReady(@NonNull YouTubePlayer youTubePlayer) {
                                 String videoId = selectedCourse.youtubeLink;
-                                youTubePlayer.loadVideo(videoId, 0);
+                                youTubePlayer.loadVideo(videoId,0);
                             }
                         });
                     }
