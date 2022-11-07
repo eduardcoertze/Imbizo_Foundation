@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
-public class InspirationHomePage extends AppCompatActivity implements Inspiration_RV_Interface{
+public class InspirationHomePage extends AppCompatActivity implements RecyclerViewInterface{
 
     ArrayList<InspirationModel> inspirationList = new ArrayList<>();
     DatabaseReference database;

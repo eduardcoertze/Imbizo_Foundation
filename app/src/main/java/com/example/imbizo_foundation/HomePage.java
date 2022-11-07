@@ -48,9 +48,11 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
         database.addValueEventListener(new ValueEventListener() {
             @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     CoursesModel coursesModel = dataSnapshot.getValue(CoursesModel.class);
                     courseList.add(coursesModel);
@@ -60,6 +62,8 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
+               // Toast.makeText(HomePage.this, "hello2", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -81,16 +85,23 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
                 switch (id) {
 
                     case R.id.nav_test:
-                        //Go to Tutorial activity
+                        //Go to quiz activity
                         Intent quizIntent = new Intent(HomePage.this, QuizActivity.class);
                         startActivity(quizIntent);
                         finish();
                         break;
 
                     case R.id.inspiration:
-                        //Go to Tutorial activity
+                        //Go to inspiration activity
                         Intent inspirationIntent = new Intent(HomePage.this, InspirationHomePage.class);
                         startActivity(inspirationIntent);
+                        finish();
+                        break;
+
+                    case R.id.local_business:
+                        //Go to local businesses activity
+                        Intent localBusinessIntent = new Intent(HomePage.this, LocalBusiness.class);
+                        startActivity(localBusinessIntent);
                         finish();
                         break;
                     default:

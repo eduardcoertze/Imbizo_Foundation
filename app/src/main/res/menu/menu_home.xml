@@ -4,16 +4,6 @@
     tools:showIn="navigation_view"
     android:background ="@drawable/gradient_background">
 
-<!--    <item   android:id="@+id/nav_account"-->
-<!--        android:icon="@drawable/ic_baseline_person_24"-->
-<!--        android:title="My Account" />-->
-<!--    <item   android:id="@+id/nav_help"-->
-<!--        android:icon="@drawable/ic_baseline_help_24"-->
-<!--        android:title="Help" />-->
-<!--    <item android:id="@+id/nav_exit"-->
-<!--        android:icon="@drawable/ic_baseline_exit_to_app_24"-->
-<!--        android:title="Sign Out" />-->
-
     <item android:id="@+id/nav_test"
         android:title="Personality Test"
         android:icon="@drawable/ic_baseline_assignment_24"
@@ -22,5 +12,10 @@
     <item android:id="@+id/inspiration"
         android:title="Inspiration"
         android:icon="@drawable/ic_baseline_auto_awesome_24"
+        />
+
+    <item android:id="@+id/local_business"
+        android:title="Local Businesses"
+        android:icon="@drawable/ic_baseline_business"
         />
 </menu>

@@ -13,12 +13,12 @@ import java.util.ArrayList;
 
 public class InspirationAdapter extends RecyclerView.Adapter<InspirationAdapter.MyViewHolder>  {
 
-    private final Inspiration_RV_Interface inspiration_rv_interface;
+    private final RecyclerViewInterface inspiration_rv_interface;
 
     Context context;
     ArrayList<InspirationModel> inspirationModels;
 
-    public InspirationAdapter(Context context, ArrayList<InspirationModel> inspirationModels, Inspiration_RV_Interface inspiration_rv_interface){
+    public InspirationAdapter(Context context, ArrayList<InspirationModel> inspirationModels, RecyclerViewInterface inspiration_rv_interface){
         this.context = context;
         this.inspirationModels = inspirationModels;
         this.inspiration_rv_interface = inspiration_rv_interface;
@@ -48,7 +48,7 @@ public class InspirationAdapter extends RecyclerView.Adapter<InspirationAdapter.
         ImageView imageView;
         TextView tvName;
 
-        public MyViewHolder(@NonNull View itemView, Inspiration_RV_Interface inspiration_rv_interface) {
+        public MyViewHolder(@NonNull View itemView, RecyclerViewInterface inspiration_rv_interface) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.imageView);
