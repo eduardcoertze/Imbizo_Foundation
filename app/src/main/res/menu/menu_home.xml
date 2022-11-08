@@ -18,4 +18,9 @@
         android:title="Local Businesses"
         android:icon="@drawable/ic_baseline_business"
         />
+
+    <item android:id="@+id/sign_out"
+        android:title="Sign Out"
+        android:icon="@drawable/ic_baseline_arrow_back_24"
+        />
 </menu>

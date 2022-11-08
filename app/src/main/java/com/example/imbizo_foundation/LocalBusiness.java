@@ -58,10 +58,11 @@ public class LocalBusiness extends AppCompatActivity implements RecyclerViewInte
         String Business = "";
         Business = localBusinessModelArrayList.get(position).localBusinessName;
 
-//        Intent inspirationContentIntent = new Intent(InspirationHomePage.this, InspirationContent.class);
-//        inspirationContentIntent.putExtra("Inspiration Name", Inspiration);
-//        inspirationContentIntent.putExtra("Inspiration Position", position);
-//        inspirationContentIntent.putExtra("List Size", inspirationList.size());
-//        startActivity(inspirationContentIntent);
+        Intent businessContentIntent = new Intent(LocalBusiness.this, LocalBusinessContent.class);
+        businessContentIntent.putExtra("Business Name", Business);
+        businessContentIntent.putExtra("Business Position", position);
+        businessContentIntent.putExtra("List Size", localBusinessModelArrayList.size());
+        startActivity(businessContentIntent);
+
     }
 }

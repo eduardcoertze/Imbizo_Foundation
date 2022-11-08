@@ -19,53 +19,49 @@
             android:layout_gravity="center"
             android:src="@drawable/imbizo_logo"/>
 
-        <ImageView
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/imageView"
-            android:layout_width="133dp"
-            android:layout_height="123dp"
-            android:layout_gravity="center" />
-
         <TextView
-            android:layout_marginBottom="10dp"
-            android:id="@+id/tv_inspirationContentName"
+            android:id="@+id/tv_businessContentName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:text="Entrepreneur Name"
+            android:text="Business Name"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
-            android:id="@+id/tv_inspirationContentIntroduction"
+            android:id="@+id/tv_businessContentIntroduction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:text="Entrepreneur Introduction"/>
+            android:text="Business Introduction"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
-            android:id="@+id/tv_inspirationContentFirstParagraph"
+            android:id="@+id/tv_businessContentFirstParagraph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:text="First Paragraph"/>
+            android:text="First Paragraph"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
-            android:id="@+id/tv_inspirationContentSecondParagraph"
+            android:id="@+id/tv_businessContentSecondParagraph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:text="Second Paragraph"/>
+            android:text="Second Paragraph"
+            android:layout_marginBottom="10dp"/>
 
-
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="133dp"
+            android:layout_height="123dp"
+            android:layout_gravity="center" />
     </LinearLayout>
 </ScrollView>

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Imbizo_Foundation"
         tools:targetApi="31">
         <activity
+            android:name=".LocalBusinessContent"
+            android:exported="false" />
+        <activity
             android:name=".LocalBusiness"
             android:exported="false" />
         <activity

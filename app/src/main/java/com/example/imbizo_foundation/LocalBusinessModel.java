@@ -25,4 +25,7 @@ public class LocalBusinessModel {
         this.localBusinessName = localBusinessName;
         this.imageUrl = imageUrl;
     }
+
+    public LocalBusinessModel() {
+    }
 }
