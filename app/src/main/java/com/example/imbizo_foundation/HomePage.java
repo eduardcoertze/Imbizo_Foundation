@@ -88,21 +88,18 @@ public class HomePage extends AppCompatActivity implements RecyclerViewInterface
                         //Go to quiz activity
                         Intent quizIntent = new Intent(HomePage.this, QuizActivity.class);
                         startActivity(quizIntent);
-                        finish();
                         break;
 
                     case R.id.inspiration:
                         //Go to inspiration activity
                         Intent inspirationIntent = new Intent(HomePage.this, InspirationHomePage.class);
                         startActivity(inspirationIntent);
-                        finish();
                         break;
 
                     case R.id.local_business:
                         //Go to local businesses activity
                         Intent localBusinessIntent = new Intent(HomePage.this, LocalBusiness.class);
                         startActivity(localBusinessIntent);
-                        finish();
                         break;
                     default:
                         return true;
